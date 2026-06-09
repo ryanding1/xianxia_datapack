@@ -1,5 +1,5 @@
 ```
-test
+xianxia_datapack
 ├─ data
 │  ├─ minecraft
 │  │  └─ tags
@@ -25,7 +25,46 @@ test
 │     │  │  └─ load.mcfunction
 │     │  ├─ items
 │     │  │  ├─ flying_sword
-│     │  │  │  ├─ disable_flight_only.mcfunction
+│     │  │  │  ├─ flying
+│     │  │  │  │  ├─ disable_flight_only.mcfunction
+│     │  │  │  │  ├─ fly_through_damage
+│     │  │  │  │  │  ├─ cleanup_end.mcfunction
+│     │  │  │  │  │  ├─ cleanup_start.mcfunction
+│     │  │  │  │  │  ├─ clear_target.mcfunction
+│     │  │  │  │  │  ├─ hit_macro.mcfunction
+│     │  │  │  │  │  ├─ on_hit.mcfunction
+│     │  │  │  │  │  ├─ source.mcfunction
+│     │  │  │  │  │  └─ source_at_sword_macro.mcfunction
+│     │  │  │  │  ├─ no_stamina.mcfunction
+│     │  │  │  │  ├─ sound
+│     │  │  │  │  │  ├─ airborne.mcfunction
+│     │  │  │  │  │  ├─ cleanup.mcfunction
+│     │  │  │  │  │  ├─ end_air.mcfunction
+│     │  │  │  │  │  ├─ random_breeze.mcfunction
+│     │  │  │  │  │  ├─ schedule_next.mcfunction
+│     │  │  │  │  │  ├─ start_air.mcfunction
+│     │  │  │  │  │  └─ tick.mcfunction
+│     │  │  │  │  ├─ stamina
+│     │  │  │  │  │  ├─ apply_xp.mcfunction
+│     │  │  │  │  │  ├─ apply_xp_macro.mcfunction
+│     │  │  │  │  │  ├─ check_drain.mcfunction
+│     │  │  │  │  │  ├─ check_refill.mcfunction
+│     │  │  │  │  │  ├─ drain.mcfunction
+│     │  │  │  │  │  ├─ refill.mcfunction
+│     │  │  │  │  │  └─ tick.mcfunction
+│     │  │  │  │  ├─ start_real_flight.mcfunction
+│     │  │  │  │  ├─ stop_real_flight.mcfunction
+│     │  │  │  │  ├─ tick.mcfunction
+│     │  │  │  │  ├─ visual
+│     │  │  │  │  │  ├─ assign_id.mcfunction
+│     │  │  │  │  │  ├─ cleanup.mcfunction
+│     │  │  │  │  │  ├─ ensure_sword.mcfunction
+│     │  │  │  │  │  ├─ summon_sword.mcfunction
+│     │  │  │  │  │  ├─ tick.mcfunction
+│     │  │  │  │  │  ├─ update_sword_rotation.mcfunction
+│     │  │  │  │  │  └─ while_flying.mcfunction
+│     │  │  │  │  ├─ while_has_item.mcfunction
+│     │  │  │  │  └─ while_holding.mcfunction
 │     │  │  │  ├─ give.mcfunction
 │     │  │  │  ├─ input
 │     │  │  │  │  ├─ right_click.mcfunction
@@ -37,7 +76,6 @@ test
 │     │  │  │  │  ├─ update_form.mcfunction
 │     │  │  │  │  └─ update_has_ride_item.mcfunction
 │     │  │  │  ├─ load.mcfunction
-│     │  │  │  ├─ no_stamina.mcfunction
 │     │  │  │  ├─ parry
 │     │  │  │  │  ├─ active_tick.mcfunction
 │     │  │  │  │  ├─ apply_to_projectiles.mcfunction
@@ -49,24 +87,6 @@ test
 │     │  │  │  │  ├─ projectile.mcfunction
 │     │  │  │  │  ├─ success.mcfunction
 │     │  │  │  │  └─ tick.mcfunction
-│     │  │  │  ├─ sound
-│     │  │  │  │  ├─ airborne.mcfunction
-│     │  │  │  │  ├─ cleanup.mcfunction
-│     │  │  │  │  ├─ end_air.mcfunction
-│     │  │  │  │  ├─ random_breeze.mcfunction
-│     │  │  │  │  ├─ schedule_next.mcfunction
-│     │  │  │  │  ├─ start_air.mcfunction
-│     │  │  │  │  └─ tick.mcfunction
-│     │  │  │  ├─ stamina
-│     │  │  │  │  ├─ apply_xp.mcfunction
-│     │  │  │  │  ├─ apply_xp_macro.mcfunction
-│     │  │  │  │  ├─ check_drain.mcfunction
-│     │  │  │  │  ├─ check_refill.mcfunction
-│     │  │  │  │  ├─ drain.mcfunction
-│     │  │  │  │  ├─ refill.mcfunction
-│     │  │  │  │  └─ tick.mcfunction
-│     │  │  │  ├─ start_real_flight.mcfunction
-│     │  │  │  ├─ stop_real_flight.mcfunction
 │     │  │  │  ├─ throw
 │     │  │  │  │  ├─ active_tick.mcfunction
 │     │  │  │  │  ├─ charge_cancel.mcfunction
@@ -85,16 +105,7 @@ test
 │     │  │  │  │  ├─ sword_tick.mcfunction
 │     │  │  │  │  ├─ throw.mcfunction
 │     │  │  │  │  └─ tick.mcfunction
-│     │  │  │  ├─ tick.mcfunction
-│     │  │  │  ├─ visual
-│     │  │  │  │  ├─ assign_id.mcfunction
-│     │  │  │  │  ├─ cleanup.mcfunction
-│     │  │  │  │  ├─ ensure_sword.mcfunction
-│     │  │  │  │  ├─ summon_sword.mcfunction
-│     │  │  │  │  ├─ tick.mcfunction
-│     │  │  │  │  ├─ update_sword_rotation.mcfunction
-│     │  │  │  │  └─ while_flying.mcfunction
-│     │  │  │  └─ while_holding.mcfunction
+│     │  │  │  └─ tick.mcfunction
 │     │  │  ├─ load.mcfunction
 │     │  │  └─ tick.mcfunction
 │     │  ├─ load.mcfunction
