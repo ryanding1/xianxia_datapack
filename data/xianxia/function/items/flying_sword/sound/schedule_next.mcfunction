@@ -1,0 +1,1 @@
+$execute store result score @s fc_sound_timer run random value $(sound_interval_min)..$(sound_interval_max)

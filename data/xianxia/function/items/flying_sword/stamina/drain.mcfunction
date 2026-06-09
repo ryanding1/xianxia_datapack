@@ -1,0 +1,1 @@
+scoreboard players operation @s fc_stamina -= #drain fc_cfg

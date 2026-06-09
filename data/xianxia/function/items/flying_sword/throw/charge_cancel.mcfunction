@@ -1,0 +1,1 @@
+scoreboard players set @s fs_throw_charge 0

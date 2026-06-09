@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "right_click": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{flying_sword:1b}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "xianxia:items/flying_sword/input/right_click"
+  }
+}
