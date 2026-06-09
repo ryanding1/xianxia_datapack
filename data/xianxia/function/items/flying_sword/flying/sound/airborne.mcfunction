@@ -12,8 +12,8 @@ execute if score @s fc_loop_timer matches ..0 run scoreboard players operation @
 
 
 # Random Breeze sounds.
-execute unless score @s fc_sound_timer matches 0.. run function xianxia:items/flying_sword/sound/schedule_next with storage xianxia:items/flying_sword/config
+execute unless score @s fc_sound_timer matches 0.. run function xianxia:items/flying_sword/flying/sound/schedule_next with storage xianxia:items/flying_sword/config
 
 scoreboard players remove @s fc_sound_timer 1
 
-execute if score @s fc_sound_timer matches ..0 run function xianxia:items/flying_sword/sound/random_breeze
+execute if score @s fc_sound_timer matches ..0 run function xianxia:items/flying_sword/flying/sound/random_breeze

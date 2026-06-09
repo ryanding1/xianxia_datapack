@@ -9,7 +9,7 @@ scoreboard players set @s fs_freeze_armed 0
 item modify entity @s weapon.mainhand xianxia:items/flying_sword/to_controller
 
 # Disable ride flight because the physical sword is leaving the player.
-function xianxia:items/flying_sword/disable_flight_only
+function xianxia:items/flying_sword/flying/disable_flight_only
 
 # Only summon the thrown sword if the conversion succeeded.
 execute if items entity @s weapon.mainhand minecraft:stick[custom_data~{flying_sword_controller:1b}] run function xianxia:items/flying_sword/throw/summon

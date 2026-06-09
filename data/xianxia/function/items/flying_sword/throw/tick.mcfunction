@@ -1,5 +1,5 @@
 # Ensure this player has an ID.
-execute unless score @s fc_id matches 1.. run function xianxia:items/flying_sword/visual/assign_id
+execute unless score @s fc_id matches 1.. run function xianxia:items/flying_sword/flying/visual/assign_id
 
 scoreboard players operation #this fc_id = @s fc_id
 

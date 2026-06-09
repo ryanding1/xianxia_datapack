@@ -5,4 +5,4 @@ execute if score @s fc_sound_choice matches 2 run playsound minecraft:entity.bre
 execute if score @s fc_sound_choice matches 3 run playsound minecraft:entity.breeze.land master @s ~ ~ ~ 1.8 1.0 0
 
 
-function xianxia:items/flying_sword/sound/schedule_next with storage xianxia:items/flying_sword/config
+function xianxia:items/flying_sword/flying/sound/schedule_next with storage xianxia:items/flying_sword/config
