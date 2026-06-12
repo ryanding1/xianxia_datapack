@@ -1,6 +1,7 @@
 execute if score #enabled debug matches 1 run tellraw @a {"text":"xianxia item flying sword loaded"}
 
 scoreboard objectives add fc_stamina dummy
+scoreboard objectives add fc_stam_delay dummy
 scoreboard objectives add fc_cfg dummy
 
 # ===== Stamina Config =====
@@ -10,6 +11,9 @@ scoreboard players set #max fc_cfg 111
 # Stamina lost per tick while draining.
 # 1 point/tick = 111 ticks = about 5.55 seconds.
 scoreboard players set #drain fc_cfg 1
+
+# Ticks after stamina is spent before grounded refill can resume.
+scoreboard players set #stam_regen_delay fc_cfg 20
 
 # XP level used for the stamina display.
 data modify storage xianxia:items/flying_sword/config xp_level set value 30
@@ -84,6 +88,24 @@ scoreboard objectives add fs_recall_armed dummy
 scoreboard objectives add fs_recall_active dummy
 scoreboard objectives add fs_freeze_armed dummy
 
+# DASH / MOVEMENT INPUT ########################################################
+
+scoreboard objectives add fs_dash_cd dummy
+scoreboard objectives add fs_dash_ticks dummy
+scoreboard objectives add fs_dash_dir dummy
+scoreboard objectives add fs_dash_mh_prev dummy
+
+# Dash distance in thousandths of a block.
+scoreboard players set #dash_distance_milli fc_cfg 5000
+
+# Dash duration in ticks. The step size is distance / ticks.
+scoreboard players set #dash_ticks fc_cfg 5
+scoreboard players operation #dash_step_milli fc_cfg = #dash_distance_milli fc_cfg
+scoreboard players operation #dash_step_milli fc_cfg /= #dash_ticks fc_cfg
+
+scoreboard players set #dash_cost fc_cfg 10
+scoreboard players set #dash_cooldown fc_cfg 10
+
 # Throw charge time.
 scoreboard players set #throw_charge_ticks fc_cfg 10
 
@@ -106,6 +128,7 @@ data modify storage xianxia:items/flying_sword/config throw_damage_radius set va
 #cleanup?
 kill @e[type=minecraft:marker,tag=flying_sword_target]
 kill @e[type=minecraft:item_display,tag=flying_sword_thrown]
+kill @e[type=minecraft:armor_stand,tag=flying_sword_dash_swap_temp]
 
 # FLY-THROUGH DAMAGE ###########################################################
 
