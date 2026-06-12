@@ -1,4 +1,4 @@
-data modify entity @s Invulnerable set value 0b
+execute unless score @s fs_dash_invuln matches 1.. run data modify entity @s Invulnerable set value 0b
 
 $data modify entity @s abilities.flySpeed set value $(fly_speed)
 

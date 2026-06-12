@@ -94,6 +94,7 @@ scoreboard objectives add fs_dash_cd dummy
 scoreboard objectives add fs_dash_ticks dummy
 scoreboard objectives add fs_dash_dir dummy
 scoreboard objectives add fs_dash_request dummy
+scoreboard objectives add fs_dash_invuln dummy
 
 scoreboard objectives add fs_swap_mh_prev dummy
 
@@ -107,6 +108,7 @@ scoreboard players operation #dash_step_milli fc_cfg /= #dash_ticks fc_cfg
 
 scoreboard players set #dash_cost fc_cfg 10
 scoreboard players set #dash_cooldown fc_cfg 10
+scoreboard players set #dash_invuln_ticks fc_cfg 5
 
 # Throw charge time.
 scoreboard players set #throw_charge_ticks fc_cfg 10

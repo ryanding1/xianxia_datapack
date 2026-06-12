@@ -5,6 +5,9 @@ function xianxia:items/flying_sword/flying/stamina/apply_xp
 
 scoreboard players operation @s fs_dash_cd = #dash_cooldown fc_cfg
 scoreboard players operation @s fs_dash_ticks = #dash_ticks fc_cfg
+scoreboard players operation @s fs_dash_invuln = #dash_invuln_ticks fc_cfg
+tag @s add flying_sword_dash_invulnerable
+data modify entity @s Invulnerable set value 1b
 
 playsound minecraft:entity.breeze.jump master @s ~ ~ ~ 1.0 1.0 0
 particle minecraft:poof ~ ~ ~ 0.1 1 0.1 0 15 force @a

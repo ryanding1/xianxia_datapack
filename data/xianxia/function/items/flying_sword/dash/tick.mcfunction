@@ -1,3 +1,5 @@
+function xianxia:items/flying_sword/dash/invulnerability_tick
+
 scoreboard players remove @s[scores={fs_dash_cd=1..}] fs_dash_cd 1
 
 execute if score @s fs_dash_ticks matches 1.. run function xianxia:items/flying_sword/dash/active_tick
