@@ -9,4 +9,4 @@ function xianxia:items/flying_sword/flying/visual/cleanup
 
 # feather turns back into a sword when stamina runs out
 function xianxia:items/flying_sword/inventory/to_sword
-function xianxia:items/flying_sword/throw/force_cleanup
+function xianxia:items/flying_sword/skills/soaring_petal_technique/force_cleanup

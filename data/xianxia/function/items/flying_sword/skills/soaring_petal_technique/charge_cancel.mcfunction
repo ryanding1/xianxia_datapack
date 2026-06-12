@@ -1,0 +1,1 @@
+scoreboard players set @s fs_spt_charge 0

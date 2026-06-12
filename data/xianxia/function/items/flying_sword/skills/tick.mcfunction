@@ -1,0 +1,1 @@
+function xianxia:items/flying_sword/skills/soaring_petal_technique/tick

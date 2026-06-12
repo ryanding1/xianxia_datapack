@@ -14,7 +14,7 @@
       },
       {
         "function": "minecraft:set_custom_data",
-        "tag": "{flying_sword:1b,flying_sword_controller:1b}"
+        "tag": "{flying_sword:1b,flying_sword_controller:1b,flying_sword_controller_skill:\"soaring_petal_technique\"}"
       },
       {
         "function": "minecraft:set_components",

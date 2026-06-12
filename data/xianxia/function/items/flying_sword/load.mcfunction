@@ -70,23 +70,13 @@ scoreboard players set #parry_cooldown fc_cfg 20
 # Active parry window after a successful projectile parry.
 scoreboard players set #parry_active_ticks fc_cfg 10
 
-# THROW / CONTROL INPUT ########################################################
+# SKILL INPUT #################################################################
 
 scoreboard objectives add fs_use_held dummy
 scoreboard objectives add fs_use_edge dummy
 
-scoreboard objectives add fs_throw_charge dummy
-scoreboard objectives add fs_throw_state dummy
-scoreboard objectives add fs_throw_dist dummy
-scoreboard objectives add fs_throw_next dummy
-scoreboard objectives add fs_throw_age dummy
-scoreboard objectives add fs_throw_loop dummy
-
 scoreboard objectives add fs_sneak_held dummy
 scoreboard objectives add fs_sneak_edge dummy
-scoreboard objectives add fs_recall_armed dummy
-scoreboard objectives add fs_recall_active dummy
-scoreboard objectives add fs_freeze_armed dummy
 
 # DASH / F-SWAP LOCK ###########################################################
 
@@ -110,28 +100,10 @@ scoreboard players set #dash_cost fc_cfg 10
 scoreboard players set #dash_cooldown fc_cfg 10
 scoreboard players set #dash_invuln_ticks fc_cfg 5
 
-# Throw charge time.
-scoreboard players set #throw_charge_ticks fc_cfg 10
+# Flying Sword skills.
+function xianxia:items/flying_sword/skills/load
 
-# Sword speed in thousandths of a block per tick.
-# 250 = 0.25 blocks/tick = 5 blocks/sec.
-scoreboard players set #throw_speed_milli fc_cfg 500
-
-# Max range in thousandths of a block.
-# 20000 = 20 blocks.
-scoreboard players set #throw_max_dist fc_cfg 10000
-
-# Sound loop timing.
-scoreboard players set #throw_elytra_loop_ticks fc_cfg 40
-
-# Macro/config values.
-data modify storage xianxia:items/flying_sword/config throw_speed set value 0.25
-data modify storage xianxia:items/flying_sword/config throw_damage set value 2.0
-data modify storage xianxia:items/flying_sword/config throw_damage_radius set value 3
-
-#cleanup?
-kill @e[type=minecraft:marker,tag=flying_sword_target]
-kill @e[type=minecraft:item_display,tag=flying_sword_thrown]
+# Cleanup temporary swap entities after /reload.
 kill @e[type=minecraft:armor_stand,tag=flying_sword_dash_swap_temp]
 kill @e[type=minecraft:armor_stand,tag=flying_sword_swap_lock_temp]
 

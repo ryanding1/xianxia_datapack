@@ -7,7 +7,7 @@ scoreboard players remove @s[scores={fs_parry_buffer=1..}] fs_parry_buffer 1
 # If right-click is held while the mainhand Flying Sword is still feather-mode,
 # keep a tiny buffer alive. When it turns into sword-mode, this can trigger ONE parry.
 #
-# Sneak is excluded so sneak + right-click can be reserved for throw charging.
+# Sneak is excluded so sneak + right-click can be reserved for weapon skills.
 execute if score @s fs_use_held matches 1.. unless predicate xianxia:input/sneak if items entity @s weapon.mainhand minecraft:feather[custom_data~{flying_sword:1b}] run scoreboard players set @s fs_parry_buffer 3
 
 

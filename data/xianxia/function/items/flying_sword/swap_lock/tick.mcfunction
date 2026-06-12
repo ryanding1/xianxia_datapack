@@ -6,7 +6,7 @@ execute if score @s fs_swap_mh_prev matches 1 if items entity @s weapon.offhand 
 # Feather form restores only.
 execute if score @s fs_swap_mh_prev matches 1 if items entity @s weapon.offhand minecraft:feather[custom_data~{flying_sword:1b}] unless items entity @s weapon.mainhand minecraft:feather[custom_data~{flying_sword:1b}] run function xianxia:items/flying_sword/swap_lock/on_feather
 
-# Controller form restores only. This prevents throw recovery from duplicating the sword.
+# Controller form restores only. This prevents skill recovery from duplicating the sword.
 execute if score @s fs_swap_mh_prev matches 1 if items entity @s weapon.offhand minecraft:stick[custom_data~{flying_sword_controller:1b}] unless items entity @s weapon.mainhand minecraft:stick[custom_data~{flying_sword_controller:1b}] run function xianxia:items/flying_sword/swap_lock/on_controller
 
 function xianxia:items/flying_sword/swap_lock/update_mainhand_state
