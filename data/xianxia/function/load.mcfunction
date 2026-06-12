@@ -1,5 +1,8 @@
 execute if score #enabled debug matches 1 run tellraw @a {"text":"xianxia datapack loaded"}
 
+#give all players saturation
+execute as @a run effect give @s saturation infinite 0 true
+
 function xianxia:parry/load
 function xianxia:posture/load
 function xianxia:items/load
