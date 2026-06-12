@@ -55,21 +55,6 @@ scoreboard players set #thousand fc_calc 1000
 # -45 degrees = -45000
 scoreboard players set #sword_yaw_offset fc_calc -45000
 
-# PARRY ########################################################################
-
-scoreboard objectives add fs_parry_cd dummy
-scoreboard objectives add fs_parry_active dummy
-scoreboard objectives add fs_parry_held dummy
-scoreboard objectives add fs_parry_edge dummy
-scoreboard objectives add fs_parry_buffer dummy
-scoreboard objectives add fs_parry_hits dummy
-
-# 20 ticks = 1 second.
-scoreboard players set #parry_cooldown fc_cfg 20
-
-# Active parry window after a successful projectile parry.
-scoreboard players set #parry_active_ticks fc_cfg 10
-
 # SKILL INPUT #################################################################
 
 scoreboard objectives add fs_use_held dummy

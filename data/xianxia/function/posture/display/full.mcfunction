@@ -1,0 +1,10 @@
+execute if score @s xx_flash matches 0 run function xianxia:posture/display/full_0
+execute if score @s xx_flash matches 1 run function xianxia:posture/display/full_1
+execute if score @s xx_flash matches 2 run function xianxia:posture/display/full_2
+execute if score @s xx_flash matches 3 run function xianxia:posture/display/full_3
+execute if score @s xx_flash matches 4 run function xianxia:posture/display/full_4
+execute if score @s xx_flash matches 5 run function xianxia:posture/display/full_4
+execute if score @s xx_flash matches 6 run function xianxia:posture/display/full_3
+execute if score @s xx_flash matches 7 run function xianxia:posture/display/full_2
+execute if score @s xx_flash matches 8 run function xianxia:posture/display/full_1
+execute if score @s xx_flash matches 9 run function xianxia:posture/display/full_0

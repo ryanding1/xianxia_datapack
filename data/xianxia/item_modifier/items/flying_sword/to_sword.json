@@ -4,7 +4,8 @@
     "item_filter": {
       "items": [
         "minecraft:feather",
-        "minecraft:stick"
+        "minecraft:stick",
+        "minecraft:diamond_sword"
       ],
       "predicates": {
         "minecraft:custom_data": "{flying_sword:1b}"
@@ -17,7 +18,7 @@
       },
       {
         "function": "minecraft:set_custom_data",
-        "tag": "{flying_sword:1b,flying_sword_controller:0b}"
+        "tag": "{flying_sword:1b,flying_sword_controller:0b,xianxia_parry_weapon:1b,xianxia_parry_buffer_weapon:1b}"
       },
       {
         "function": "minecraft:set_components",

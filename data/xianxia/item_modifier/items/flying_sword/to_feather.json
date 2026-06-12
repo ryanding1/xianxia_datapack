@@ -21,7 +21,8 @@
             "italic": false
           },
           "minecraft:custom_data": {
-            "flying_sword":true
+            "flying_sword":true,
+            "xianxia_parry_buffer_weapon":true
           },
           "minecraft:enchantment_glint_override": true,
           "minecraft:food": {

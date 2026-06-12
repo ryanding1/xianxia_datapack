@@ -5,3 +5,7 @@ execute unless score @s fs_use_held matches 1.. run scoreboard players set @s fs
 
 # Held input lasts briefly and is refreshed every tick while right-click is held.
 scoreboard players set @s fs_use_held 2
+
+execute unless predicate xianxia:input/sneak run function xianxia:parry/input/right_click
+
+execute unless predicate xianxia:input/sneak unless entity @s[tag=xianxia_posture_broken] run function xianxia:parry/force_guard

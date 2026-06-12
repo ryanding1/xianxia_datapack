@@ -9,5 +9,5 @@ function xianxia:items/flying_sword/flying/visual/cleanup
 
 function xianxia:items/flying_sword/inventory/to_sword
 
-execute if entity @s[tag=flying_sword_parrying] run function xianxia:items/flying_sword/parry/end with storage xianxia:items/flying_sword/config
+execute if entity @s[tag=xianxia_parrying] run function xianxia:parry/cancel
 function xianxia:items/flying_sword/skills/soaring_petal_technique/force_cleanup

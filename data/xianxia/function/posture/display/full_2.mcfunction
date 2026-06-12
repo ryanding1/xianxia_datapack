@@ -1,0 +1,1 @@
+title @s actionbar {"text":"","extra":[{"text":"<","color":"white"},{"text":"■■■■■■■■■■","color":"#AE0D00"},{"text":"|","color":"white"},{"text":"■■■■■■■■■■","color":"#AE0D00"},{"text":">","color":"white"}]}
