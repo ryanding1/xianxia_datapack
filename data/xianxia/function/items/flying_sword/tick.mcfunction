@@ -1,3 +1,6 @@
+# Restore protected mainhand forms before other item systems normalize inventory.
+execute as @a[gamemode=!creative,gamemode=!spectator] at @s run function xianxia:items/flying_sword/swap_lock/tick
+
 # Flying / riding mode.
 function xianxia:items/flying_sword/flying/tick
 

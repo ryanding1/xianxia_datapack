@@ -1,6 +1,3 @@
-# Restore the original mainhand/offhand state before judging the dash.
-function xianxia:items/flying_sword/dash/restore_swap
-
 # Stamina may not exist if this is the first sword action after /reload.
 execute unless score @s fc_stamina matches 0.. run scoreboard players operation @s fc_stamina = #max fc_cfg
 

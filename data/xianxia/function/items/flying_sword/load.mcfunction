@@ -12,8 +12,8 @@ scoreboard players set #max fc_cfg 111
 # 1 point/tick = 111 ticks = about 5.55 seconds.
 scoreboard players set #drain fc_cfg 1
 
-# Ticks after stamina is spent before grounded refill can resume.
-scoreboard players set #stam_regen_delay fc_cfg 20
+# Ticks after stamina is spent before refill can resume.
+scoreboard players set #stam_regen_delay fc_cfg 40
 
 # XP level used for the stamina display.
 data modify storage xianxia:items/flying_sword/config xp_level set value 30
@@ -88,12 +88,14 @@ scoreboard objectives add fs_recall_armed dummy
 scoreboard objectives add fs_recall_active dummy
 scoreboard objectives add fs_freeze_armed dummy
 
-# DASH / MOVEMENT INPUT ########################################################
+# DASH / F-SWAP LOCK ###########################################################
 
 scoreboard objectives add fs_dash_cd dummy
 scoreboard objectives add fs_dash_ticks dummy
 scoreboard objectives add fs_dash_dir dummy
-scoreboard objectives add fs_dash_mh_prev dummy
+scoreboard objectives add fs_dash_request dummy
+
+scoreboard objectives add fs_swap_mh_prev dummy
 
 # Dash distance in thousandths of a block.
 scoreboard players set #dash_distance_milli fc_cfg 5000
@@ -129,6 +131,7 @@ data modify storage xianxia:items/flying_sword/config throw_damage_radius set va
 kill @e[type=minecraft:marker,tag=flying_sword_target]
 kill @e[type=minecraft:item_display,tag=flying_sword_thrown]
 kill @e[type=minecraft:armor_stand,tag=flying_sword_dash_swap_temp]
+kill @e[type=minecraft:armor_stand,tag=flying_sword_swap_lock_temp]
 
 # FLY-THROUGH DAMAGE ###########################################################
 
