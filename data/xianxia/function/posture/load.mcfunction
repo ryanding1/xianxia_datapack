@@ -4,6 +4,7 @@ scoreboard objectives add xx_post_cfg dummy
 scoreboard objectives add xx_posture dummy
 scoreboard objectives add xx_post_max dummy
 scoreboard objectives add xx_post_cd dummy
+scoreboard objectives add xx_post_decay dummy
 scoreboard objectives add xx_post_delay dummy
 scoreboard objectives add xx_post_break dummy
 scoreboard objectives add xx_post_delta dummy
