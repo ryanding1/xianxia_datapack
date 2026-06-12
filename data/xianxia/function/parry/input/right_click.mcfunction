@@ -1,5 +1,7 @@
 # Edge detection for the shared parry input.
 execute unless score @s xx_parry_held matches 1.. run scoreboard players set @s xx_parry_edge 1
+execute if score @s xx_parry_edge matches 1 run scoreboard players set @s xx_parry_rise 1
+execute if score @s xx_parry_edge matches 1 run scoreboard players operation @s xx_parry_reset = #parry_spam_reset_ticks xx_parry_cfg
 scoreboard players operation @s xx_parry_held = #guard_hold_ticks xx_parry_cfg
 
 # Fresh press on a parry weapon starts the deflect window.

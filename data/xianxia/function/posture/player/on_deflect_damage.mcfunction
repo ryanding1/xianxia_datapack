@@ -1,5 +1,7 @@
 scoreboard players set @s xx_post_handled 1
 scoreboard players set @s xx_deflect 0
+scoreboard players set @s xx_parry_penalty 0
+scoreboard players set @s xx_parry_reset 0
 
 function xianxia:posture/player/add_deflect
 function xianxia:parry/clear_hit_projectiles

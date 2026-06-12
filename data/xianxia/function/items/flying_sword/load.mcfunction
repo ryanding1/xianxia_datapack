@@ -69,6 +69,8 @@ scoreboard objectives add fs_dash_cd dummy
 scoreboard objectives add fs_dash_ticks dummy
 scoreboard objectives add fs_dash_dir dummy
 scoreboard objectives add fs_dash_request dummy
+scoreboard objectives add fs_dash_buffer dummy
+scoreboard objectives add fs_dash_buf_dir dummy
 scoreboard objectives add fs_dash_invuln dummy
 
 scoreboard objectives add fs_swap_mh_prev dummy

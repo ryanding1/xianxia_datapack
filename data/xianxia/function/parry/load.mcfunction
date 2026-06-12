@@ -5,10 +5,14 @@ scoreboard objectives add xx_parry_cd dummy
 scoreboard objectives add xx_parry_held dummy
 scoreboard objectives add xx_parry_edge dummy
 scoreboard objectives add xx_parry_buf dummy
+scoreboard objectives add xx_parry_penalty dummy
+scoreboard objectives add xx_parry_reset dummy
+scoreboard objectives add xx_parry_rise dummy
 scoreboard objectives add xx_guard dummy
 scoreboard objectives add xx_guard_ready dummy
 scoreboard objectives add xx_guard_hurt dummy
 scoreboard objectives add xx_deflect dummy
+scoreboard objectives add xx_deflect_cap dummy
 scoreboard objectives add xx_parry_hits dummy
 
 function xianxia:parry/config
