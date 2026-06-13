@@ -18,5 +18,5 @@ tag @s add xianxia_parrying
 function xianxia:parry/guard_ready_tick
 function xianxia:parry/guard_protect
 
-playsound minecraft:item.armor.equip_iron master @s ~ ~ ~ 0.8 1.35 0
+execute at @s run playsound minecraft:item.armor.equip_iron master @a[distance=..24] ~ ~ ~ 0.8 1.35 0
 particle minecraft:sweep_attack ^ ^1 ^1 0 0 0 0 1 force @a[distance=..24]

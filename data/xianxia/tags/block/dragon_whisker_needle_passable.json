@@ -1,0 +1,13 @@
+{
+  "values": [
+    "minecraft:air",
+    "minecraft:cave_air",
+    "minecraft:void_air",
+    "minecraft:water",
+    "minecraft:lava",
+    {
+      "id": "#minecraft:replaceable",
+      "required": false
+    }
+  ]
+}

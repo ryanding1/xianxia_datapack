@@ -1,6 +1,6 @@
 scoreboard players set #posture_max xx_post_cfg 100
 
-scoreboard players set #posture_health_mult xx_post_cfg 10
+scoreboard players set #posture_health_mult xx_post_cfg 5
 scoreboard players set #health_scale xx_post_cfg 10
 
 scoreboard players set #posture_deflect xx_post_cfg 5
