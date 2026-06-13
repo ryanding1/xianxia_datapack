@@ -17,3 +17,6 @@ function xianxia:skills/dragon_whisker_needle/visual/summon
 
 tag @e[tag=dragon_whisker_needle_hit] remove dragon_whisker_needle_hit
 tag @s remove dragon_whisker_needle_owner_this
+
+scoreboard players add @s dwn_shots_fired 1
+scoreboard players operation @s dwn_fire_gap = #dwn_shot_gap_ticks fc_cfg

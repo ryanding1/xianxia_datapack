@@ -1,0 +1,2 @@
+function xianxia:skills/dragon_whisker_needle/fail
+function xianxia:skills/dragon_whisker_needle/finish
