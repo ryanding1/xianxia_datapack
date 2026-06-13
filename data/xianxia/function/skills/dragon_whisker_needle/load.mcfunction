@@ -15,7 +15,7 @@ scoreboard objectives add dwn_fire_gap dummy
 scoreboard players set #dwn_charge_ticks fc_cfg 5
 
 # Stamina spent by each needle fired.
-scoreboard players set #dwn_cost fc_cfg 2
+scoreboard players set #dwn_cost fc_cfg 3
 
 # Maximum needles fired per charge. Ignored if #dwn_infinite is 1.
 scoreboard players set #dwn_max_shots fc_cfg 3
@@ -33,7 +33,7 @@ scoreboard players set #dwn_cooldown fc_cfg 0
 scoreboard players set #dwn_range_blocks fc_cfg 128
 
 # Damage dealt by one needle hit.
-data modify storage xianxia:skills/dragon_whisker_needle/config dwn_damage set value 1.0
+data modify storage xianxia:skills/dragon_whisker_needle/config dwn_damage set value 0.5
 
 # Radius around each ray sample used to approximate entity hitboxes.
 data modify storage xianxia:skills/dragon_whisker_needle/config dwn_hit_radius set value 0.65
