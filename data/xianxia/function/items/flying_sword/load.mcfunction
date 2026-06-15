@@ -87,9 +87,6 @@ scoreboard players set #dash_cost fc_cfg 10
 scoreboard players set #dash_cooldown fc_cfg 10
 scoreboard players set #dash_invuln_ticks fc_cfg 5
 
-# Flying Sword skills.
-function xianxia:items/flying_sword/skills/load
-
 # Cleanup temporary swap entities after /reload.
 kill @e[type=minecraft:armor_stand,tag=flying_sword_dash_swap_temp]
 kill @e[type=minecraft:armor_stand,tag=flying_sword_swap_lock_temp]

@@ -3,6 +3,7 @@ tag @s remove dragon_whisker_needle_has_book
 execute if items entity @s container.* minecraft:written_book[custom_data~{skill:"dragon_whisker_needle"}] run tag @s add dragon_whisker_needle_has_book
 execute if items entity @s weapon.mainhand minecraft:written_book[custom_data~{skill:"dragon_whisker_needle"}] run tag @s add dragon_whisker_needle_has_book
 execute if items entity @s weapon.offhand minecraft:written_book[custom_data~{skill:"dragon_whisker_needle"}] run tag @s add dragon_whisker_needle_has_book
+execute if items entity @s weapon.offhand minecraft:book[custom_data~{skill:"dragon_whisker_needle"}] run tag @s add dragon_whisker_needle_has_book
 
 # Initialize stamina for players carrying the skill book.
 execute if entity @s[tag=dragon_whisker_needle_has_book] unless score @s fc_stamina matches 0.. run scoreboard players operation @s fc_stamina = #max fc_cfg
@@ -14,13 +15,16 @@ execute if entity @s[tag=dragon_whisker_needle_has_book] unless items entity @s 
 # Cooldown timer.
 scoreboard players remove @s[scores={dwn_cd=1..}] dwn_cd 1
 
-# Current shift-right-click combo state. The book may be in either hand.
+# Current shift-right-click combo state. The readable book may be in mainhand;
+# the offhand form is a regular book so it cannot open the reading GUI.
 scoreboard players set @s dwn_combo_now 0
 scoreboard players set @s dwn_combo_edge 0
 execute if score @s dwn_use_held matches 1.. if predicate xianxia:input/sneak if items entity @s weapon.mainhand minecraft:written_book[custom_data~{skill:"dragon_whisker_needle"}] run scoreboard players set @s dwn_combo_now 1
-execute if score @s dwn_use_held matches 1.. if predicate xianxia:input/sneak if items entity @s weapon.offhand minecraft:written_book[custom_data~{skill:"dragon_whisker_needle"}] run scoreboard players set @s dwn_combo_now 1
+execute if score @s dwn_use_held matches 1.. if predicate xianxia:input/sneak if items entity @s weapon.offhand minecraft:book[custom_data~{skill:"dragon_whisker_needle"}] run scoreboard players set @s dwn_combo_now 1
+execute if score @s sb_use_held matches 1.. if predicate xianxia:input/sneak if items entity @s weapon.mainhand minecraft:written_book[custom_data~{skill:"dragon_whisker_needle"}] run scoreboard players set @s dwn_combo_now 1
+execute if score @s sb_use_held matches 1.. if predicate xianxia:input/sneak if items entity @s weapon.offhand minecraft:book[custom_data~{skill:"dragon_whisker_needle"}] run scoreboard players set @s dwn_combo_now 1
 execute if score @s fs_use_held matches 1.. if predicate xianxia:input/sneak if items entity @s weapon.mainhand minecraft:written_book[custom_data~{skill:"dragon_whisker_needle"}] run scoreboard players set @s dwn_combo_now 1
-execute if score @s fs_use_held matches 1.. if predicate xianxia:input/sneak if items entity @s weapon.offhand minecraft:written_book[custom_data~{skill:"dragon_whisker_needle"}] run scoreboard players set @s dwn_combo_now 1
+execute if score @s fs_use_held matches 1.. if predicate xianxia:input/sneak if items entity @s weapon.offhand minecraft:book[custom_data~{skill:"dragon_whisker_needle"}] run scoreboard players set @s dwn_combo_now 1
 execute if score @s dwn_combo_now matches 1 unless score @s dwn_combo_held matches 1.. run scoreboard players set @s dwn_combo_edge 1
 
 # Existing charges continue while held; new charges only begin on the combo rising edge.

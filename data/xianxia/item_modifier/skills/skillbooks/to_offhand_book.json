@@ -1,0 +1,95 @@
+[
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "minecraft:written_book",
+      "predicates": {
+        "minecraft:custom_data": "{skillbook:1b}"
+      }
+    },
+    "on_pass": [
+      {
+        "function": "minecraft:set_item",
+        "item": "minecraft:book"
+      },
+      {
+        "function": "minecraft:set_components",
+        "components": {
+          "minecraft:enchantment_glint_override": true,
+          "minecraft:food": {
+            "nutrition": 0,
+            "saturation": 0,
+            "can_always_eat": true
+          },
+          "minecraft:consumable": {
+            "consume_seconds": 2147483647,
+            "animation": "none",
+            "has_consume_particles": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "minecraft:written_book",
+      "predicates": {
+        "minecraft:custom_data": "{skill:\"dragon_whisker_needle\"}"
+      }
+    },
+    "on_pass": [
+      {
+        "function": "minecraft:set_item",
+        "item": "minecraft:book"
+      },
+      {
+        "function": "minecraft:set_components",
+        "components": {
+          "minecraft:enchantment_glint_override": true,
+          "minecraft:food": {
+            "nutrition": 0,
+            "saturation": 0,
+            "can_always_eat": true
+          },
+          "minecraft:consumable": {
+            "consume_seconds": 2147483647,
+            "animation": "none",
+            "has_consume_particles": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "minecraft:written_book",
+      "predicates": {
+        "minecraft:custom_data": "{skill:\"soaring_petal_technique\"}"
+      }
+    },
+    "on_pass": [
+      {
+        "function": "minecraft:set_item",
+        "item": "minecraft:book"
+      },
+      {
+        "function": "minecraft:set_components",
+        "components": {
+          "minecraft:enchantment_glint_override": true,
+          "minecraft:food": {
+            "nutrition": 0,
+            "saturation": 0,
+            "can_always_eat": true
+          },
+          "minecraft:consumable": {
+            "consume_seconds": 2147483647,
+            "animation": "none",
+            "has_consume_particles": false
+          }
+        }
+      }
+    ]
+  }
+]

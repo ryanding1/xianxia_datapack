@@ -1,0 +1,83 @@
+{
+  "criteria": {
+    "marked_written_book": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:written_book",
+          "predicates": {
+            "minecraft:custom_data": "{skillbook:1b}"
+          }
+        }
+      }
+    },
+    "marked_offhand_book": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:book",
+          "predicates": {
+            "minecraft:custom_data": "{skillbook:1b}"
+          }
+        }
+      }
+    },
+    "dragon_whisker_needle_written_legacy": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:written_book",
+          "predicates": {
+            "minecraft:custom_data": "{skill:\"dragon_whisker_needle\"}"
+          }
+        }
+      }
+    },
+    "dragon_whisker_needle_offhand_legacy": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:book",
+          "predicates": {
+            "minecraft:custom_data": "{skill:\"dragon_whisker_needle\"}"
+          }
+        }
+      }
+    },
+    "soaring_petal_technique_written_legacy": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:written_book",
+          "predicates": {
+            "minecraft:custom_data": "{skill:\"soaring_petal_technique\"}"
+          }
+        }
+      }
+    },
+    "soaring_petal_technique_offhand_legacy": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:book",
+          "predicates": {
+            "minecraft:custom_data": "{skill:\"soaring_petal_technique\"}"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "marked_written_book",
+      "marked_offhand_book",
+      "dragon_whisker_needle_written_legacy",
+      "dragon_whisker_needle_offhand_legacy",
+      "soaring_petal_technique_written_legacy",
+      "soaring_petal_technique_offhand_legacy"
+    ]
+  ],
+  "rewards": {
+    "function": "xianxia:skills/skillbooks/input/right_click"
+  }
+}
