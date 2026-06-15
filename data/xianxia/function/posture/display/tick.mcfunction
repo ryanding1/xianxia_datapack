@@ -14,4 +14,5 @@ execute if score @s xx_post_bucket matches 6 run function xianxia:posture/displa
 execute if score @s xx_post_bucket matches 7 run function xianxia:posture/display/7
 execute if score @s xx_post_bucket matches 8 run function xianxia:posture/display/8
 execute if score @s xx_post_bucket matches 9 run function xianxia:posture/display/9
-execute if score @s xx_post_bucket matches 10.. run function xianxia:posture/display/full
+execute if score @s xx_post_bucket matches 10.. unless entity @s[tag=xianxia_posture_broken] run function xianxia:posture/display/full_0
+execute if score @s xx_post_bucket matches 10.. if entity @s[tag=xianxia_posture_broken] run function xianxia:posture/display/full

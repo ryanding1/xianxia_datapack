@@ -1,5 +1,6 @@
 tag @s add xianxia_posture_broken
 
+scoreboard players operation @s xx_posture = @s xx_post_max
 scoreboard players operation @s xx_post_break = #posture_break_ticks xx_post_cfg
 scoreboard players set @s xx_post_cd 0
 

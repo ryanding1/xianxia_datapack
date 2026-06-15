@@ -1,3 +1,5 @@
+scoreboard players operation @s xx_posture = @s xx_post_max
+
 data modify entity @s abilities.flying set value 0b
 data modify entity @s abilities.mayfly set value 0b
 data modify entity @s abilities.walkSpeed set value 0.0f

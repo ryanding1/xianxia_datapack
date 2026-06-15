@@ -3,6 +3,7 @@ execute store result score @s xx_hurt run data get entity @s HurtTime
 
 execute unless score @s xx_hp_seen matches 1 run function xianxia:posture/player/init
 function xianxia:posture/player/death_check
+execute if score @s xx_hp matches 1.. if score @s xx_hp_prev matches ..0 run function xianxia:posture/display/0
 scoreboard players operation @s xx_post_max = #posture_max xx_post_cfg
 scoreboard players operation @s xx_post_delay = #posture_delay xx_post_cfg
 
