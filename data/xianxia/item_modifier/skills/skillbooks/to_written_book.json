@@ -20,49 +20,5 @@
         }
       }
     ]
-  },
-  {
-    "function": "minecraft:filtered",
-    "item_filter": {
-      "items": "minecraft:book",
-      "predicates": {
-        "minecraft:custom_data": "{skill:\"dragon_whisker_needle\"}"
-      }
-    },
-    "on_pass": [
-      {
-        "function": "minecraft:set_item",
-        "item": "minecraft:written_book"
-      },
-      {
-        "function": "minecraft:set_components",
-        "components": {
-          "!minecraft:food": {},
-          "!minecraft:consumable": {}
-        }
-      }
-    ]
-  },
-  {
-    "function": "minecraft:filtered",
-    "item_filter": {
-      "items": "minecraft:book",
-      "predicates": {
-        "minecraft:custom_data": "{skill:\"soaring_petal_technique\"}"
-      }
-    },
-    "on_pass": [
-      {
-        "function": "minecraft:set_item",
-        "item": "minecraft:written_book"
-      },
-      {
-        "function": "minecraft:set_components",
-        "components": {
-          "!minecraft:food": {},
-          "!minecraft:consumable": {}
-        }
-      }
-    ]
   }
 ]

@@ -1,6 +1,5 @@
 execute if score #enabled debug matches 1 run tellraw @a {"text":"xianxia skill Dragon Whisker Needle loaded"}
 
-scoreboard objectives add dwn_use_held dummy
 scoreboard objectives add dwn_combo_now dummy
 scoreboard objectives add dwn_combo_held dummy
 scoreboard objectives add dwn_combo_edge dummy

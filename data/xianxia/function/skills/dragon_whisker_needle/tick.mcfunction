@@ -2,7 +2,6 @@
 tag @s remove dragon_whisker_needle_has_book
 execute if items entity @s container.* minecraft:written_book[custom_data~{skill:"dragon_whisker_needle"}] run tag @s add dragon_whisker_needle_has_book
 execute if items entity @s weapon.mainhand minecraft:written_book[custom_data~{skill:"dragon_whisker_needle"}] run tag @s add dragon_whisker_needle_has_book
-execute if items entity @s weapon.offhand minecraft:written_book[custom_data~{skill:"dragon_whisker_needle"}] run tag @s add dragon_whisker_needle_has_book
 execute if items entity @s weapon.offhand minecraft:book[custom_data~{skill:"dragon_whisker_needle"}] run tag @s add dragon_whisker_needle_has_book
 
 # Initialize stamina for players carrying the skill book.
@@ -19,8 +18,6 @@ scoreboard players remove @s[scores={dwn_cd=1..}] dwn_cd 1
 # the offhand form is a regular book so it cannot open the reading GUI.
 scoreboard players set @s dwn_combo_now 0
 scoreboard players set @s dwn_combo_edge 0
-execute if score @s dwn_use_held matches 1.. if predicate xianxia:input/sneak if items entity @s weapon.mainhand minecraft:written_book[custom_data~{skill:"dragon_whisker_needle"}] run scoreboard players set @s dwn_combo_now 1
-execute if score @s dwn_use_held matches 1.. if predicate xianxia:input/sneak if items entity @s weapon.offhand minecraft:book[custom_data~{skill:"dragon_whisker_needle"}] run scoreboard players set @s dwn_combo_now 1
 execute if score @s sb_use_held matches 1.. if predicate xianxia:input/sneak if items entity @s weapon.mainhand minecraft:written_book[custom_data~{skill:"dragon_whisker_needle"}] run scoreboard players set @s dwn_combo_now 1
 execute if score @s sb_use_held matches 1.. if predicate xianxia:input/sneak if items entity @s weapon.offhand minecraft:book[custom_data~{skill:"dragon_whisker_needle"}] run scoreboard players set @s dwn_combo_now 1
 execute if score @s fs_use_held matches 1.. if predicate xianxia:input/sneak if items entity @s weapon.mainhand minecraft:written_book[custom_data~{skill:"dragon_whisker_needle"}] run scoreboard players set @s dwn_combo_now 1
@@ -33,9 +30,7 @@ execute unless score @s dwn_charge matches 1.. if score @s dwn_combo_edge matche
 
 scoreboard players operation @s dwn_combo_held = @s dwn_combo_now
 
-# Decay right-click held input and reset one-tick state.
-scoreboard players remove @s[scores={dwn_use_held=1..}] dwn_use_held 1
-execute unless score @s dwn_use_held matches 1.. run scoreboard players set @s dwn_use_held 0
+# Reset one-tick state.
 scoreboard players set @s dwn_combo_edge 0
 scoreboard players set @s dwn_combo_now 0
 tag @s remove dragon_whisker_needle_has_book
