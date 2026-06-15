@@ -1,20 +1,20 @@
 # Clear only projectiles close enough to have plausibly caused this guarded hit.
-execute as @e[type=minecraft:arrow,tag=!xianxia_parried,distance=..2,nbt={inGround:0b}] at @s run function xianxia:parry/projectile_hit
-execute as @e[type=minecraft:spectral_arrow,tag=!xianxia_parried,distance=..2,nbt={inGround:0b}] at @s run function xianxia:parry/projectile_hit
-execute as @e[type=minecraft:trident,tag=!xianxia_parried,distance=..2,nbt={inGround:0b}] at @s run function xianxia:parry/projectile_hit
+kill @e[type=minecraft:arrow,distance=..2,nbt={inGround:0b}]
+kill @e[type=minecraft:spectral_arrow,distance=..2,nbt={inGround:0b}]
+kill @e[type=minecraft:trident,distance=..2,nbt={inGround:0b}]
 
-execute as @e[type=minecraft:snowball,tag=!xianxia_parried,distance=..2] at @s run function xianxia:parry/projectile_hit
-execute as @e[type=minecraft:egg,tag=!xianxia_parried,distance=..2] at @s run function xianxia:parry/projectile_hit
-execute as @e[type=minecraft:ender_pearl,tag=!xianxia_parried,distance=..2] at @s run function xianxia:parry/projectile_hit
-execute as @e[type=minecraft:splash_potion,tag=!xianxia_parried,distance=..2] at @s run function xianxia:parry/projectile_hit
-execute as @e[type=minecraft:experience_bottle,tag=!xianxia_parried,distance=..2] at @s run function xianxia:parry/projectile_hit
+kill @e[type=minecraft:snowball,distance=..2]
+kill @e[type=minecraft:egg,distance=..2]
+kill @e[type=minecraft:ender_pearl,distance=..2]
+kill @e[type=minecraft:splash_potion,distance=..2]
+kill @e[type=minecraft:experience_bottle,distance=..2]
 
-execute as @e[type=minecraft:wind_charge,tag=!xianxia_parried,distance=..2] at @s run function xianxia:parry/projectile_hit
-execute as @e[type=minecraft:breeze_wind_charge,tag=!xianxia_parried,distance=..2] at @s run function xianxia:parry/projectile_hit
-execute as @e[type=minecraft:shulker_bullet,tag=!xianxia_parried,distance=..2] at @s run function xianxia:parry/projectile_hit
-execute as @e[type=minecraft:llama_spit,tag=!xianxia_parried,distance=..2] at @s run function xianxia:parry/projectile_hit
+kill @e[type=minecraft:wind_charge,distance=..2]
+kill @e[type=minecraft:breeze_wind_charge,distance=..2]
+kill @e[type=minecraft:shulker_bullet,distance=..2]
+kill @e[type=minecraft:llama_spit,distance=..2]
 
-execute as @e[type=minecraft:small_fireball,tag=!xianxia_parried,distance=..2] at @s run function xianxia:parry/projectile_hit
-execute as @e[type=minecraft:fireball,tag=!xianxia_parried,distance=..2] at @s run function xianxia:parry/projectile_hit
-execute as @e[type=minecraft:dragon_fireball,tag=!xianxia_parried,distance=..2] at @s run function xianxia:parry/projectile_hit
-execute as @e[type=minecraft:wither_skull,tag=!xianxia_parried,distance=..2] at @s run function xianxia:parry/projectile_hit
+kill @e[type=minecraft:small_fireball,distance=..2]
+kill @e[type=minecraft:fireball,distance=..2]
+kill @e[type=minecraft:dragon_fireball,distance=..2]
+kill @e[type=minecraft:wither_skull,distance=..2]

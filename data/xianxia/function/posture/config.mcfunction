@@ -6,7 +6,7 @@ scoreboard players set #health_scale xx_post_cfg 10
 scoreboard players set #posture_deflect xx_post_cfg 5
 scoreboard players set #posture_block xx_post_cfg 10
 
-scoreboard players set #posture_delay xx_post_cfg 20
+scoreboard players set #posture_delay xx_post_cfg 30
 scoreboard players set #posture_break_ticks xx_post_cfg 60
 
 # Natural posture decay interval, in ticks per 1 posture recovered.

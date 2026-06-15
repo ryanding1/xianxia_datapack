@@ -1,1 +1,0 @@
-function xianxia:parry/success
