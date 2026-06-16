@@ -67,21 +67,18 @@ scoreboard objectives add fs_sneak_edge dummy
 
 scoreboard objectives add fs_dash_cd dummy
 scoreboard objectives add fs_dash_ticks dummy
-scoreboard objectives add fs_dash_dir dummy
 scoreboard objectives add fs_dash_request dummy
 scoreboard objectives add fs_dash_buffer dummy
-scoreboard objectives add fs_dash_buf_dir dummy
 scoreboard objectives add fs_dash_invuln dummy
+scoreboard objectives add fs_dash_calc dummy
 
 scoreboard objectives add fs_swap_mh_prev dummy
 
-# Dash distance in thousandths of a block.
-scoreboard players set #dash_distance_milli fc_cfg 5000
+# Dash motion magnitude in thousandths of a block per tick.
+scoreboard players set #dash_motion_milli fc_cfg 1300
 
-# Dash duration in ticks. The step size is distance / ticks.
+# Dash active timer in ticks.
 scoreboard players set #dash_ticks fc_cfg 5
-scoreboard players operation #dash_step_milli fc_cfg = #dash_distance_milli fc_cfg
-scoreboard players operation #dash_step_milli fc_cfg /= #dash_ticks fc_cfg
 
 scoreboard players set #dash_cost fc_cfg 10
 scoreboard players set #dash_cooldown fc_cfg 10
@@ -90,6 +87,7 @@ scoreboard players set #dash_invuln_ticks fc_cfg 5
 # Cleanup temporary swap entities after /reload.
 kill @e[type=minecraft:armor_stand,tag=flying_sword_dash_swap_temp]
 kill @e[type=minecraft:armor_stand,tag=flying_sword_swap_lock_temp]
+kill @e[type=minecraft:marker,tag=flying_sword_dash_motion_temp]
 
 # FLY-THROUGH DAMAGE ###########################################################
 

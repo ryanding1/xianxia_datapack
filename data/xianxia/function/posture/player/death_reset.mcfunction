@@ -14,7 +14,6 @@ function xianxia:parry/cancel
 function xianxia:posture/player/jump_unlock
 scoreboard players set @s fs_dash_request 0
 scoreboard players set @s fs_dash_buffer 0
-scoreboard players set @s fs_dash_buf_dir 0
 
 tag @s remove xianxia_posture_broken
 function xianxia:posture/display/0

@@ -13,4 +13,5 @@ execute if score @s fs_dash_invuln matches 1.. run attribute @s minecraft:knockb
 playsound minecraft:entity.breeze.jump master @s ~ ~ ~ 1.0 1.0 0
 particle minecraft:poof ~ ~ ~ 0.1 1 0.1 0 15 force @a
 
-function xianxia:items/flying_sword/dash/active_tick
+execute store result storage xianxia:items/flying_sword/dash motion_distance double 0.001 run scoreboard players get #dash_motion_milli fc_cfg
+function xianxia:items/flying_sword/dash/apply_motion with storage xianxia:items/flying_sword/dash
