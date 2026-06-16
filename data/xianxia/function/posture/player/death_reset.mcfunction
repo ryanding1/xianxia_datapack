@@ -12,6 +12,9 @@ scoreboard players operation @s xx_post_idle = #display_idle_ticks xx_post_cfg
 
 function xianxia:parry/cancel
 function xianxia:posture/player/jump_unlock
+effect clear @s minecraft:slowness
+effect clear @s minecraft:weakness
+effect clear @s minecraft:mining_fatigue
 scoreboard players set @s fs_dash_request 0
 scoreboard players set @s fs_dash_buffer 0
 
